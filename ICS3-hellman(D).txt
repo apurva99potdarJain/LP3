@@ -1,0 +1,19 @@
+def power(a,b,p):
+    if b==1:
+        return a
+    else:
+        return(pow(a,b)%p)
+p=23
+print("the value of p is",p)
+g=9
+print("the value of g",g)
+a=4
+print("the private kry for alice",a)
+x=power(g,a,p)
+b=3
+print("The private key for bob",b)
+y=power(g,b,p)
+ka=int(power(y,a,p))
+kb=int(power(x,b,p))
+print("secret key for alice is ",int(ka))
+print("secret key for bob is",int(kb))
